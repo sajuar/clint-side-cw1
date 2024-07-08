@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pompadour fade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./img/barber.jpg" alt="">
+            </div>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Contact us">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to our Barbershop</h1>
+            <p>Experience the best haircut in town</p>
+            <button>Book now</button>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h1>About Us</h1>
+        <h2>Welcome to Pompadour Fade</h2>
+        <p>
+            At Pompadour Fade, we are dedicated to providing top-notch grooming services for men of all ages. Our team of experienced barbers is passionate about their craft, ensuring each client leaves our shop looking and feeling their best.
+        </p>
+        <p>
+            Established in 2019, our shop has become a staple in the community, known for our friendly atmosphere, attention to detail, and commitment to excellence. Whether you're here for a quick trim, a classic shave, or a modern haircut, we strive to make every visit a relaxing and enjoyable experience.
+        </p>
+        <p>
+            We pride ourselves on using the highest quality products and the latest techniques to deliver outstanding results. Our barbers are continuously honing their skills and staying updated with the latest trends to provide you with the best possible service.
+        </p>
+        <p>
+            Beyond haircuts and shaves, we offer a range of grooming services, including beard trims, hot towel treatments, and more. We believe that every client deserves personalized attention, and we take the time to understand your unique style and preferences.
+        </p>
+        <p>
+            Thank you for choosing Pompadour Fade. We look forward to welcoming you and helping you achieve your perfect look.
+        </p>
+    </section>
+    <section class="Contact us" id="Contact us">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <!-- Contact Form -->
+            <form id="contactForm">
+                <!-- Error message container -->
+                <div class="error" id="error"></div>
+                
+                <!-- Name input field -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <!-- Email input field -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <!-- Subject input field -->
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <!-- Message textarea -->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <!-- Submit button -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
