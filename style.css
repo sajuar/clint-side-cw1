@@ -9,8 +9,10 @@ header{
     width: 100%;
 }
 nav{
+    position: fixed;
     display: flex;
-    background-color: bisque;
+    width: 100%;
+    background-color: #ebece9;
     height: 50px;
 }
 .logo{
@@ -90,7 +92,7 @@ nav ul li a{
 
 
 .about{
-    padding: 25px 50px;
+    padding: 50px 50px;
     height: 100vh;
 }
 form{
@@ -99,62 +101,75 @@ form{
 
     
 
-.Contact us{
+.Contact us {
     font-family: Arial, sans-serif;
-            background-color: #ebece9;
-            margin: 0;
-            padding: 0;
-        }
-        /* Container styling for centering the form */
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #bdbaba;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        /* Header styling */
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        /* Form styling */
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        /* Label styling */
-        label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        /* Input and textarea styling */
-        input, textarea {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        /* Button styling */
-        button {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        /* Button hover effect */
-        button:hover {
-            background-color: #0056b3;
-        }
-        /* Error message styling */
-        .error {
-            color: red;
-            margin-bottom: 15px;
-        }
+    background-color: #ebece9;
+    margin: 0;
+    padding: 0;
+}
 
+/* Container styling for centering the form */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #bdbaba;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input and textarea styling */
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+    nav ul {
+        gap: 20px;
+    }
+}
