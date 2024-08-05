@@ -2,26 +2,37 @@
 html{
     scroll-behavior: smooth;
 }
+
 body{
     margin: 0;
     padding: 0;
 
 }
+
+
+/* Header styles */
 header{
     width: 100%;
 }
+
+
+/*  Navbar  */
 nav{
     position: fixed;
     display: flex;
     width: 100%;
-    background-color: #ebece9;
+    background-color: #ece7e0;
     height: 50px;
 }
+
+
+/* Logo styling */
 .logo{
     height: 50px;
     width: 100px;
     float: left;
 }
+
 .logo img{
     height: 100%;
     width: 100%;
@@ -33,17 +44,21 @@ nav ul{
     gap: 50px;
     float: right;
 }
+
 nav ul li{
     list-style: none;
 }
+
 nav ul li:hover{
     border-bottom: 2px solid black;
 }
+
 nav ul li a{
     text-decoration: none;
     color: #000;
 }
 
+/* Home page background img styling */
 .hero{
     background: url(./img/cover.jpg);
 
@@ -51,52 +66,118 @@ nav ul li a{
     background-size: cover;
     background-position: center;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+/* Home page text styling */
 .hero-text{
     text-align: center;
     color: aliceblue;
     justify-content: center;
     padding-top: 200px;
 }
+
 .hero-text h1{
     font-size: 60px;
 }
+
 .hero-text p{
     font-size: 40px;
     font-style: italic;
 }
+    /* media query */
+@media only screen and (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 40px;
+    }
+    .hero-text p{
+        font-size: 30px;
+        font-style: italic;
+    }
+}
+
+
+/*Book now button styling */
 button a{
     text-decoration: none;
     color: #ebece9;
-
 }
 
+
+/* About styling */
 .about{
-    padding: 50px 50px;
-    height: 100vh;
+    padding: 60px 20px;
+    background-color: rgb(244, 242, 240);
+    justify-content: center;
+    align-items: center;
 }
+
+.content{
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .content img{
+    height: auto;
+    width: 45%;
+
+}
+
+.text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: justify;
+}
+
+
+/* Media queries for About (For mobile screens)*/
+@media only screen and (max-width: 600px) {
+    .about .content img{
+      width: 100%;
+    }
+  }
+
+/* contact form */
+
 form{
     margin: 0 auto;
 }   
 
     
 
-.Contact us {
+/* contact form */
+
+form{
+    margin: 0 auto;
+}   
+
+    
+
+.Contactus {
+    padding: 60px 20px;
     font-family: Arial, sans-serif;
-    background-color: #ebece9;
-    margin: 0;
-    padding: 0;
+    background-color: rgb(244, 239, 236);
 }
+
 
 /* Container styling for centering the form */
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #bdbaba;
+    background-color: rgb(235, 232, 230);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Header styling */
 h1 {
@@ -104,17 +185,20 @@ h1 {
     margin-bottom: 20px;
 }
 
+
 /* Form styling */
 form {
     display: flex;
     flex-direction: column;
 }
 
+
 /* Label styling */
 label {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 
 /* Input and textarea styling */
 input,
@@ -125,6 +209,7 @@ textarea {
     border-radius: 5px;
     font-size: 16px;
 }
+
 
 /* Button styling */
 button {
@@ -137,10 +222,12 @@ button {
     cursor: pointer;
 }
 
+
 /* Button hover effect */
 button:hover {
     background-color: #0056b3;
 }
+
 
 /* Error message styling */
 .error {
@@ -148,3 +235,170 @@ button:hover {
     margin-bottom: 15px;
 }
 
+
+/* FOOTER SECTION */
+footer{
+    background-color: rgb(244, 242, 240);
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.social a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 24px;
+    margin-right: 20px;
+
+}
+
+
+.address {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    
+}
+
+.copyright{
+    text-align: center;
+}
+
+/*******************************/
+/********* Pricing CSS *********/
+/*******************************/
+.price {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 15px 0;
+}
+
+.price .price-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 30px;
+    background: rgba(29, 36, 52, .04);
+    transition: .3s;
+}
+
+.price .price-item:hover {
+    background: #D5B981;
+}
+
+.price .price-img {
+    position: relative;
+    width: 100px;
+}
+
+.price .price-img img {
+    width: 100%;
+}
+
+.price .price-img::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    z-index: 1;
+}
+
+.price .price-text {
+    position: relative;
+    padding: 0 15px;
+    width: calc(100% - 100px);
+    overflow: hidden;
+}
+
+.price .price-text h2 {
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.price .price-text h3 {
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+
+
+/*******************************/
+/*********** Team CSS **********/
+/*******************************/
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.team .team-item {
+    margin-bottom: 30px;
+}
+
+.team .team-img {
+    position: relative;
+}
+
+.team .team-img::after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    background: transparent;
+    border: 1px solid #F6F6F7;
+    transition: .3s;
+    z-index: 1;
+}
+
+.team .team-img img {
+    width: 100%;
+}
+
+.team .team-text {
+    position: relative;
+    margin: -60px 15px 0 15px;
+    padding: 30px 15px;
+    text-align: center;
+    background: #F6F6F7;
+    transition: .3s;
+    z-index: 2;
+}
+
+.team .team-text h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.team .team-text p {
+    margin: 0;
+    color: #333333;
+}
+
+.team .team-item:hover .team-text {
+    background: #D5B981;
+}
+
+.team .team-item:hover .team-img::after {
+    border-color: #D5B981;
+}
