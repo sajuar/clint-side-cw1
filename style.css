@@ -23,6 +23,7 @@ nav{
     width: 100%;
     background-color: #ece7e0;
     height: 50px;
+    z-index: 1000;
 }
 
 
@@ -56,6 +57,77 @@ nav ul li:hover{
 nav ul li a{
     text-decoration: none;
     color: #000;
+}
+
+
+/*hamburger*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) ;
+}
+.hamburger .line{
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger.active .line:first-child{
+    -webkit-transition: translateY(7px) rotate(45deg);
+    -ms-transform: translateY(7px) rotate(45deg);
+    -o-transform: translateY(7px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .line:last-child{
+    -webkit-transition: translateY(-7px) rotate(-45deg);
+    -ms-transform: translateY(-7px) rotate(-45deg);
+    -o-transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
+}
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 5px;
+}
+@Media (max-width: 768px){
+    .navul {
+        position: absolute;
+        top: 80%;
+        width: 700px;
+        height: 130px;
+        border-radius: 10px;
+        border: 1px solid var(--color);
+        background-color: #ece7e0;
+        transition: all o.3s ease-in-out;
+        display: none;
+    }
+    .navul {
+        margin-top: 10px;
+    }
+    .navul li{
+        text-align: center;
+    }
+    .navul a{
+        color: var(--color);
+    }
+    .navul.active {
+        display: block;
+
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger .line {
+        color: #000;
+    }
 }
 
 /* Home page background img styling */
@@ -146,11 +218,7 @@ button a{
     }
   }
 
-/* contact form */
 
-form{
-    margin: 0 auto;
-}   
 
     
 
@@ -190,24 +258,29 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
 }
 
 
 /* Label styling */
 label {
+    display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    float: left;
+    font-size: 16px;
 }
 
 
 /* Input and textarea styling */
 input,
 textarea {
-    margin-bottom: 15px;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
 
@@ -230,9 +303,13 @@ button:hover {
 
 
 /* Error message styling */
+.form-error{
+    margin-left: 1px;
+}
 .error {
     color: red;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+    
 }
 
 
@@ -274,8 +351,14 @@ footer{
 /*******************************/
 /********* Pricing CSS *********/
 /*******************************/
+.services {
+    padding: 60px 20px;
+    background-color: rgb(244, 242, 240);
+    justify-content: center;
+    align-items: center;
+}
 .price {
-    position: relative;
+    position: relatie;
     width: 100%;
     padding: 40px 0 15px 0;
 }
@@ -401,4 +484,274 @@ footer{
 
 .team .team-item:hover .team-img::after {
     border-color: #D5B981;
+}
+
+/*******************************/
+/******** Portfolio CSS ********/
+/*******************************/
+.portfolio {
+    position: relative;
+    padding: 45px 0 15px 0;
+    background: #ffffff;
+}
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: -15px 0 25px 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    color: #1d2434;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0;
+    background: none;
+    border: 2px solid #1d2434;
+    transition: .3s;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    background: #1d2434;
+    color: #D5B981;
+}
+
+.portfolio .portfolio-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.portfolio .portfolio-item:hover {
+    margin-top: -10px;
+}
+
+.portfolio .portfolio-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.portfolio .portfolio-wrap a::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    background: transparent;
+    border: 1px solid #F6F6F7;
+    transition: .3s;
+    z-index: 1;
+}
+
+.portfolio .portfolio-wrap:hover a::after {
+    border-color: #D5B981;
+}
+
+.portfolio img {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+
+
+/* ===== Form ========= */
+/*  Contact */
+.contact-section {
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
+
+  .contact-section .form-group input:focus {
+      outline: 0;
+      border-color: #777;
+  }
+  .contact-section .form-group.success input{
+    border-color: #2ecc71;
+  }
+  .contact-section .form-group textarea {
+    height: 150px;
+  }
+  
+
+  
+small {
+      color: #b6200d;
+      position: absolute;
+      visibility: hidden;
+  }
+  
+  .form-group.error small {
+    visibility: visible;
+    text-align: center;
+    color: #b6200d;
+}
+
+  .contact-section button {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 2px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .contact-section button:hover {
+    background-color: #444;
+  }
+
+
+  /* scroll to top button */
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#scrollTopBtn:hover {
+    background-color: #555;
+}
+
+
+/* img side show */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* faq */
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+
+}
+.faq-question {
+    cursor: pointer;
+}
+
+
+/* book now button */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    background-color: #218838;
+}
+
+.booking-confirmation {
+    display: none;
+    margin-top: 20px;
+    color: green;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    margin-top: 10px;
 }
