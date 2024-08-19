@@ -9,12 +9,14 @@
 
 
 
-    <!-- Font awesome -->
+    <!-- Font awesome css for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="./style.css">
-    
+
 
 </head>
 
@@ -28,7 +30,7 @@
             </div>
 
             <ul class="navul" id="navul">
-                <!-- Home, About, contact Navigationbar -->
+                <!-- Home, About, contact Navigation links-->
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -36,54 +38,80 @@
                 <li><a href="#images">images</a></li>
                 <li><a href="#Contact us">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+            <!-- Dark mode toggle -->
+            <div class="nav-btns">
+                <div class="dark-light">
+                    <svg style="width:24px; margin: 10px; " viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                    </svg>
+                </div>
+                <!--hamburger menu button -->
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
             </div>
         </nav>
     </header>
 
 
-    <!-- Home page text-->
+    <!-- Home page Hero section-->
     <section class="hero">
         <div class="hero-text">
             <h1 class="hero-title">Welcome to our Barbershop</h1>
             <p>Experience the best haircut in town</p>
-            <!-- Book Now Button linked with contact us -->
+            <!-- Book Now Button -->
             <button id="bookNowBtn">Book Now</button>
 
-    <!-- Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Book Your Appointment</h2>
-            <div class="form-group">
-                <label for="serviceType">Choose a Service</label>
-                <select id="serviceType">
-                    <option value="Haircut">Haircut</option>
-                    <option value="Beard Trim">Beard Trim</option>
-                    <option value="Shave">Shave</option>
-                    <option value="Haircut & Beard Trim">Haircut & Beard Trim</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="appointmentTime">Choose a Time</label>
-                <input type="datetime-local" id="appointmentTime">
-            </div>
-            <div class="error-message" id="errorMessage">
-                Please select a time between 9 AM and 8 PM.
-            </div>
-            <div class="form-group">
-                <button id="confirmBookingBtn">Confirm Booking</button>
-            </div>
-            <div class="booking-confirmation">
-                Your appointment has been booked successfully!
-            </div>
-        </div>
-    </div>
+            <!-- Booking Modal for appointment scheduling -->
+            <div id="bookingModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Book Your Appointment</h2>
+                    <!-- Form to collect booking details -->
+                    <div class="form-book">
+                        <label for="name">Name</label>
+                        <input type="text" id="name1" placeholder="Enter your name">
+                    </div>
+                    <div class="form-book">
+                        <label for="email">Email</label>
+                        <input type="email" id="email1" placeholder="Enter your email">
+                    </div>
+                    <div class="form-book">
+                        <label for="serviceType">Choose a Service</label>
+                        <select id="serviceType">
+                            <option value="Haircut">Haircut</option>
+                            <option value="Beard Trim">Beard Trim</option>
+                            <option value="Shave">Shave</option>
+                            <option value="Haircut & Beard Trim">Haircut & Beard Trim</option>
+                        </select>
+                    </div>
+                    <div class="form-book">
+                        <label for="appointmentTime">Choose a Time</label>
+                        <input type="datetime-local" id="appointmentTime">
+                    </div>
+                    <!-- Error message for incorrect time selection -->
+                    <div class="error-message" id="errorMessage">
+                        Please select a time between 9 AM and 8 PM.
+                    </div>
+                    <div class="form-book">
+                        <button id="confirmBookingBtn">Confirm Booking</button>
+                    </div>
+                    <!-- Confirmation message after booking -->
+                    <div class="booking-confirmation">
+                        Your appointment has been booked successfully!
+                    </div>
+                </div>
     </section>
+    <!-- Home page Hero section End-->
 
+    <!-- Countdown timer section for special offers -->
+    <div id="offer-countdown">
+        <h2>Special 25% Off On All Services Ends In:</h2>
+        <p id="countdown-timer"></p>
+    </div>
 
     <!-- About page -->
     <section class="about" id="about">
@@ -117,6 +145,9 @@
                 </p>
             </div>
         </div>
+        <!-- About page End-->
+
+        <!-- FAQ Section -->
         <div class="faq">
             <div class="faq-item">
                 <h3 class="faq-question">What services do you offer?</h3>
@@ -131,7 +162,9 @@
                 </div>
             </div>
         </div>
+        <!-- FAQ Section End -->
 
+        <!-- Services and Pricing section -->
     </section>
     <section class="services" id="services">
         <!-- Pricing Start -->
@@ -142,6 +175,7 @@
                     <h2>We Provide Best Price in the City</h2>
                 </div>
                 <div class="row">
+                    <!-- Individual pricing items for services -->
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="price-item">
                             <div class="price-img">
@@ -280,7 +314,7 @@
     </section>
     <!-- Pricing End -->
 
-    <!-- barber -->
+    <!-- Barber Team section -->
     <section class="Barber" id="Barber">
         <div class="team">
             <div class="container">
@@ -289,6 +323,7 @@
                     <h2>Meet Our Hair Cut Expert Barber</h2>
                 </div>
                 <div class="row">
+                    <!-- Individual barber profiles -->
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
@@ -338,80 +373,48 @@
         </div>
     </section>
 
-<section class="images" id="images">
-    <div class="portfolio">
-        <div class="container">
-            <div class="section-header text-center">
-                <p>Barber Image Gallery</p>
-                <h2>Some Images From Our Barber Gallery</h2>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <ul id="portfolio-flters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".first">Hair Cut</li>
-                        <li data-filter=".second">Beard Style</li>
-                        <li data-filter=".third">Color & Wash</li>
-                    </ul>
+    <!-- Image Gallery section -->
+    <section class="images" id="images">
+        <div class="portfolio">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Barber Image Gallery</p>
+                    <h2>Some Images From Our Barber Gallery</h2>
                 </div>
-            </div>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="img/portfolio-1.jpg" style="width:100%">
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".first">Hair Cut</li>
+                            <li data-filter=".second">Beard Style</li>
+                            <li data-filter=".third">Color & Wash</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="mySlides fade">
-                    <img src="img/portfolio-2.jpg" style="width:100%">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="img/portfolio-1.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/portfolio-2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/portfolio-3.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/portfolio-4.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/portfolio-5.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/portfolio-6.jpg" style="width:100%">
+                    </div>
                 </div>
-                <div class="mySlides fade">
-                    <img src="img/portfolio-3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="img/portfolio-4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="img/portfolio-5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="img/portfolio-6.jpg" style="width:100%">
-                </div>
-            </div>
-            
-                </div>
+
             </div>
         </div>
-    </div>
-</section>
-
-    <!-- Contact Form -->
-    <section class="Contactus" id="Contact us">
-        <div class="container">
-            <h1>Contact Us</h1>
-            
-            
-            <form id="contact-form">
-                <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name">
-                  <small>Error message</small>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email">
-                  <small>Error message</small>
-                </div>
-                <div class="form-group">
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" rows="5"></textarea>
-                  <small>Error message</small>
-                </div>
-                <div style="display:flex; float: left;">
-                  <label class="form-check-label">
-                    <input class="form-check" type="checkbox" required> I agree to Terms & Conditions.
-                  </label>
-                  <span class="error" id="termsError"></span>
-                </div>
-                <button type="submit">Send Message</button>
-              </form>
+        </div>
         </div>
     </section>
 
@@ -419,26 +422,101 @@
     <button id="scrollTopBtn"><i class="fa fa-arrow-up"></i></button>
 
 
+    <!-- Contact Form -->
+    <section class="Contactus" id="Contact us">
+        <div class="container">
+            <h1>Contact Us</h1>
+
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <small>Error message</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <small>Error message</small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    <small>Error message</small>
+                </div>
+                <div style="display:flex; float: left;">
+                    <label class="form-check-label">
+                        <input class="form-check" type="checkbox" required> I agree to Terms & Conditions.
+                    </label>
+                    <span class="error" id="termsError"></span>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
     
-<!-- FOOTER SECTION -->
-<footer>
-    <div class="social">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-    <div class="address">
-        <p><i><i class="fa fa-map-marker"></i> 456B Romford Rd, London, E7 8AP </i></p>
-        <p><i class="fa fa-phone"></i> +44 748122222</p>
-        <p><i class="fa fa-envelope"></i> info@pompadourfade.com</p>
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
 
-    </div>
-    <p class="copyright">
-        &copy; 2024 Pompadour Fade. All rights reserved.
-    </p>
-</footer>
+                <div class="social">
+                    <a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com/">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
 
-<script src="./script.js"></script>
+                <div class="address">
+                    <p>
+                        <i class="fa fa-map-marker"></i>
+                        456B Romford Rd, London, E7 8AP
+                    </p>
+                    <p>
+                        <i class="fa fa-phone"></i>
+                        +44 748122222
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope"></i>
+                        info@pompadourfade.com
+                    </p>
+
+                    <!-- Google Maps Embed -->
+                    <div class="google-maps">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.772451403058!2d-0.051243184167348166!3d51.54269791725447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ce69d1e890b%3A0x8f4d49f8b0d01f10!2s456B%20Romford%20Rd%2C%20London%20E7%208AP%2C%20UK!5e0!3m2!1sen!2sus!4v1696358383968!5m2!1sen!2sus"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="opening-hours">
+                    <p><strong>Opening Hours:</strong></p>
+                    <p>Mon - Fri: 9:00 AM - 8:00 PM</p>
+                    <p>Sat - Sun: 10:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                &copy; 2024 Pompadour Fade. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
 
 </body>
 
